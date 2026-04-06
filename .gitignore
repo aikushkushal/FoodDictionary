@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+
+# Environment variables
+.env
+
+# Node.js dependencies
+node_modules/
+
+# Visual Studio Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Other common artifacts
+*.log
+*.tmp
+*.bak
+*.swp
+*~
