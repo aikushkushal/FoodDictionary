@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Dictionary 🍔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin: 40px;
+      background: #f5f5f5;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+    }
+    button {
+      padding: 10px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍽 Food Dictionary</h1>
+
+  <input type="text" id="foodInput" placeholder="Enter food name">
+  <button onclick="searchFood()">Search</button>
+
+  <div id="result"></div>
+
+  <script>
+    const foodData = {
+      pizza: "A popular Italian dish with cheese and toppings.",
+      burger: "A sandwich with a patty, usually beef or veggie.",
+      pasta: "Italian noodles served with sauce.",
+      sushi: "Japanese dish with rice and seafood."
+    };
+
+    function searchFood() {
+      const input = document.getElementById("foodInput").value.toLowerCase();
+      const result = document.getElementById("result");
+
+      if (foodData[input]) {
+        result.innerText = foodData[input];
+      } else {
+        result.innerText = "Food not found!";
+      }
+    }
+  </script>
+
+</body>
+</html>
